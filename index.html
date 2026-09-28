@@ -928,7 +928,7 @@
 
     .speakers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
       gap: 1.8rem;
     }
 
@@ -1003,6 +1003,53 @@
       font-size: 0.86rem;
       color: var(--charite-text-muted);
       line-height: 1.5;
+    }
+
+    .speaker-org {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--charite-dark-blue);
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .speaker-org span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--charite-cyan);
+      flex-shrink: 0;
+    }
+
+    .speaker-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      width: 100%;
+      padding-top: 1.1rem;
+      border-top: 1px dashed var(--charite-grey-border);
+    }
+
+    .speaker-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .speaker-row .speaker-avatar {
+      width: 48px;
+      height: 48px;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .speaker-row .speaker-name {
+      font-size: 1rem;
+      margin-bottom: 0;
+      line-height: 1.35;
     }
 
     .speaker-badge-tbc {
@@ -1544,6 +1591,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#speakers">Speakers</a></li>
         <li><a href="#agenda">Draft Agenda</a></li>
         <li><a href="#venue">Venue</a></li>
         <li><a href="#register" class="nav-cta">Register Now</a></li>
@@ -1735,6 +1783,96 @@
       <h2>A Dialogue Between Science, Industry & Global Policy</h2>
       <p> The Industry Dialogue aims to offer a neutral, scientific forum where academic leaders, global health specialists, and industry experts exchange breakthroughs in vaccine platforms, explore strategic public-private synergies, and debate policy and market access realities.</p>
       <a href="#agenda" class="btn btn-primary">View Programme Timetable</a>
+    </div>
+  </section>
+
+  <!-- CONFIRMED SPEAKERS SECTION -->
+  <section class="speakers-section" id="speakers">
+    <div class="section-container">
+      <div class="section-header fade-in-element">
+        <span class="section-tag">Industry Session</span>
+        <h2 class="section-title">Confirmed Speakers</h2>
+        <p class="section-lead">Representatives of six vaccine manufacturers sharing their perspectives on recent
+          developments and what lies ahead.</p>
+      </div>
+
+      <div class="speakers-grid">
+        <div class="speaker-card fade-in-element">
+          <h3 class="speaker-org"><span class="dot"></span>Pfizer</h3>
+          <div class="speaker-list">
+            <div class="speaker-row">
+              <div class="speaker-avatar">CT</div>
+              <div class="speaker-name">Christian Theilacker</div>
+            </div>
+            <div class="speaker-row">
+              <div class="speaker-avatar">CE</div>
+              <div class="speaker-name">Prof. Dr. med. Christof von Eiff</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <h3 class="speaker-org"><span class="dot"></span>GSK</h3>
+          <div class="speaker-list">
+            <div class="speaker-row">
+              <div class="speaker-avatar">PE</div>
+              <div class="speaker-name">Philipp Eßmann</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <h3 class="speaker-org"><span class="dot"></span>Sanofi</h3>
+          <div class="speaker-list">
+            <div class="speaker-row">
+              <div class="speaker-avatar">OD</div>
+              <div class="speaker-name">Dr. Oliver Damm</div>
+            </div>
+            <div class="speaker-row">
+              <div class="speaker-avatar">MP</div>
+              <div class="speaker-name">Dr. Manuel Plomer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <h3 class="speaker-org"><span class="dot"></span>Moderna</h3>
+          <div class="speaker-list">
+            <div class="speaker-row">
+              <div class="speaker-avatar">CW</div>
+              <div class="speaker-name">Christian Winkler</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <h3 class="speaker-org"><span class="dot"></span>Bavarian Nordic</h3>
+          <div class="speaker-list">
+            <div class="speaker-row">
+              <div class="speaker-avatar">HH</div>
+              <div class="speaker-name">Hubertus Hochrein</div>
+            </div>
+            <div class="speaker-row">
+              <div class="speaker-avatar">ES</div>
+              <div class="speaker-name">Eva Schalk</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <h3 class="speaker-org"><span class="dot"></span>MSD</h3>
+          <div class="speaker-list">
+            <div class="speaker-row">
+              <div class="speaker-avatar">TR</div>
+              <div class="speaker-name">Thorsten Christian Reuter</div>
+            </div>
+            <div class="speaker-row">
+              <div class="speaker-avatar">VL</div>
+              <div class="speaker-name">Vanessa Lipp</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
