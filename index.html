@@ -1052,6 +1052,66 @@
       line-height: 1.35;
     }
 
+    .speaker-presenter {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--charite-light-blue);
+      background: var(--charite-ice);
+      padding: 0.1rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.25rem;
+    }
+
+    .speaker-talk {
+      width: 100%;
+      background: var(--charite-grey-light);
+      border-left: 3px solid var(--charite-light-blue);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .speaker-talk-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--charite-text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .speaker-talk-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--charite-dark-blue);
+      line-height: 1.4;
+    }
+
+    .speakers-group-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--charite-dark-blue);
+      margin-bottom: 1.6rem;
+    }
+
+    .speakers-group-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--charite-grey-border);
+    }
+
+    .speakers-grid + .speakers-group-title {
+      margin-top: 3.5rem;
+    }
+
     .speaker-badge-tbc {
       display: inline-block;
       font-size: 0.68rem;
@@ -1790,19 +1850,27 @@
   <section class="speakers-section" id="speakers">
     <div class="section-container">
       <div class="section-header fade-in-element">
-        <span class="section-tag">Industry Session</span>
+        <span class="section-tag">Speakers</span>
         <h2 class="section-title">Confirmed Speakers</h2>
-        <p class="section-lead">Representatives of six vaccine manufacturers sharing their perspectives on recent
-          developments and what lies ahead.</p>
+        <p class="section-lead">Representatives of six vaccine manufacturers and researchers from the Charité Center
+          for Global Health sharing their perspectives on recent developments and what lies ahead.</p>
       </div>
 
+      <h3 class="speakers-group-title fade-in-element">Industry Session</h3>
       <div class="speakers-grid">
         <div class="speaker-card fade-in-element">
           <h3 class="speaker-org"><span class="dot"></span>Pfizer</h3>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">Update on pneumococcal conjugate vaccine PCV20</div>
+          </div>
           <div class="speaker-list">
             <div class="speaker-row">
               <div class="speaker-avatar">CT</div>
-              <div class="speaker-name">Christian Theilacker</div>
+              <div>
+                <div class="speaker-name">Christian Theilacker</div>
+                <span class="speaker-presenter">Presenter</span>
+              </div>
             </div>
             <div class="speaker-row">
               <div class="speaker-avatar">CE</div>
@@ -1847,10 +1915,17 @@
 
         <div class="speaker-card fade-in-element">
           <h3 class="speaker-org"><span class="dot"></span>Bavarian Nordic</h3>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">Vaccines for Public Preparedness and Travel Health</div>
+          </div>
           <div class="speaker-list">
             <div class="speaker-row">
               <div class="speaker-avatar">HH</div>
-              <div class="speaker-name">Hubertus Hochrein</div>
+              <div>
+                <div class="speaker-name">Dr. Hubertus Hochrein</div>
+                <span class="speaker-presenter">Presenter</span>
+              </div>
             </div>
             <div class="speaker-row">
               <div class="speaker-avatar">ES</div>
@@ -1861,15 +1936,86 @@
 
         <div class="speaker-card fade-in-element">
           <h3 class="speaker-org"><span class="dot"></span>MSD</h3>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">From Innovation to Impact: Why the Next Challenge in Vaccines Is
+              Implementation</div>
+          </div>
           <div class="speaker-list">
             <div class="speaker-row">
               <div class="speaker-avatar">TR</div>
-              <div class="speaker-name">Thorsten Christian Reuter</div>
+              <div>
+                <div class="speaker-name">Dr. Thorsten Christian Reuter</div>
+                <span class="speaker-presenter">Presenter</span>
+              </div>
             </div>
             <div class="speaker-row">
               <div class="speaker-avatar">VL</div>
               <div class="speaker-name">Vanessa Lipp</div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="speakers-group-title fade-in-element">Charité Center for Global Health Session</h3>
+      <div class="speakers-grid">
+        <div class="speaker-card fade-in-element">
+          <div class="speaker-avatar">TK</div>
+          <div class="speaker-name">Tomislav Kostevc</div>
+          <div class="speaker-role">Discovery Research</div>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">Antigen discovery and translational immunology (tbc)</div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <div class="speaker-avatar">LS</div>
+          <div class="speaker-name">Leif Sanders</div>
+          <div class="speaker-role">Clinical Evaluation</div>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">Licensing and post-licensure vaccine studies at Charité</div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <div class="speaker-avatar">JM</div>
+          <div class="speaker-name">Julia Mayer</div>
+          <div class="speaker-role">Measuring / Predicting Impact</div>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">The value of vaccines in Germany</div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <div class="speaker-avatar">LI</div>
+          <div class="speaker-name">Lucy Ingaiza</div>
+          <div class="speaker-role">Measuring / Predicting Impact</div>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">The value of vaccines in Germany</div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <div class="speaker-avatar">FD</div>
+          <div class="speaker-name">Felix Drexler</div>
+          <div class="speaker-role">Vaccines for Emerging Pathogens</div>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">Considerations for Oropouche virus vaccines</div>
+          </div>
+        </div>
+
+        <div class="speaker-card fade-in-element">
+          <div class="speaker-avatar">BH</div>
+          <div class="speaker-name">Branwen Hennig</div>
+          <div class="speaker-role">Policy Translation</div>
+          <div class="speaker-talk">
+            <span class="speaker-talk-label">Presentation</span>
+            <div class="speaker-talk-title">Connecting Global Health Policy</div>
           </div>
         </div>
       </div>
@@ -1936,7 +2082,7 @@
               <div class="subtalk-card">
                 <span class="subtalk-time">09:00</span>
                 <div class="subtalk-org">Pfizer</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
+                <div class="subtalk-topic">Update on pneumococcal conjugate vaccine PCV20</div>
                 <div class="subtalk-speakers">Christian Theilacker &bull; Christof von Eiff</div>
               </div>
 
@@ -1964,15 +2110,15 @@
               <div class="subtalk-card">
                 <span class="subtalk-time">09:40</span>
                 <div class="subtalk-org">Bavarian Nordic</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
-                <div class="subtalk-speakers">Hubertus Hochrein &bull; Eva Schalk</div>
+                <div class="subtalk-topic">Vaccines for Public Preparedness and Travel Health</div>
+                <div class="subtalk-speakers">Dr. Hubertus Hochrein &bull; Eva Schalk</div>
               </div>
 
               <div class="subtalk-card">
                 <span class="subtalk-time">09:50</span>
                 <div class="subtalk-org">MSD</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
-                <div class="subtalk-speakers">Thorsten Christian Reuter &bull; Vanessa Lipp</div>
+                <div class="subtalk-topic">From Innovation to Impact: Why the Next Challenge in Vaccines Is Implementation</div>
+                <div class="subtalk-speakers">Dr. Thorsten Christian Reuter &bull; Vanessa Lipp</div>
               </div>
 
               <div class="subtalk-card">
