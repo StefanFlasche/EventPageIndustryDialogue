@@ -928,15 +928,15 @@
 
     .speakers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+      gap: 0.9rem;
     }
 
     .speaker-card {
       background: #ffffff;
       border: 1px solid var(--charite-grey-border);
-      border-radius: 16px;
-      padding: 1.6rem;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
       box-shadow: var(--card-shadow);
       transition: var(--transition);
       display: flex;
@@ -944,6 +944,15 @@
       align-items: flex-start;
       position: relative;
       overflow: hidden;
+    }
+
+    a.speaker-card {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .timeline-item[id] {
+      scroll-margin-top: 100px;
     }
 
     .speaker-card::before {
@@ -959,7 +968,7 @@
     }
 
     .speaker-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-3px);
       box-shadow: var(--card-shadow-hover);
     }
 
@@ -984,19 +993,33 @@
     }
 
     .speaker-name {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--charite-dark-blue);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
+      padding-right: 4.5rem;
     }
 
     .speaker-role {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--charite-light-blue);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--charite-text-muted);
+      line-height: 1.35;
+    }
+
+    .speaker-role-badge {
+      display: inline-block;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.6rem;
+      letter-spacing: 0.06em;
+      padding: 2px 7px;
+      border-radius: 5px;
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      font-size: 0.6rem;
+      background: #e8f1fa;
+      color: var(--charite-light-blue);
     }
 
     .speaker-bio {
@@ -1832,7 +1855,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -1856,180 +1878,107 @@
           for Global Health sharing their perspectives on recent developments and what lies ahead.</p>
       </div>
 
-      <h3 class="speakers-group-title fade-in-element">Industry Session</h3>
       <div class="speakers-grid">
-        <div class="speaker-card fade-in-element">
-          <h3 class="speaker-org"><span class="dot"></span>Pfizer</h3>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Pfizer's respiratory vaccine portfolio: current evidence, open questions, future directions</div>
-          </div>
-          <div class="speaker-list">
-            <div class="speaker-row">
-              <div class="speaker-avatar">CT</div>
-              <div>
-                <div class="speaker-name">Christian Theilacker</div>
-                <span class="speaker-presenter">Presenter</span>
-              </div>
-            </div>
-            <div class="speaker-row">
-              <div class="speaker-avatar">CE</div>
-              <div class="speaker-name">Christof von Eiff</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <h3 class="speaker-org"><span class="dot"></span>GSK</h3>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Mission 75% - Shaping the Future of Prevention</div>
-          </div>
-          <div class="speaker-list">
-            <div class="speaker-row">
-              <div class="speaker-avatar">AM</div>
-              <div class="speaker-name">Alen Marijam</div>
-            </div>
-            <div class="speaker-row">
-              <div class="speaker-avatar">CW</div>
-              <div class="speaker-name">Corinna Weinhart</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <h3 class="speaker-org"><span class="dot"></span>Sanofi</h3>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Convincing Stakeholders Through Scientific Evidence – What it Takes Beyond a Vaccine Pipeline</div>
-          </div>
-          <div class="speaker-list">
-            <div class="speaker-row">
-              <div class="speaker-avatar">OD</div>
-              <div class="speaker-name">Oliver Damm</div>
-            </div>
-            <div class="speaker-row">
-              <div class="speaker-avatar">MP</div>
-              <div class="speaker-name">Manuel Plomer</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <h3 class="speaker-org"><span class="dot"></span>Moderna</h3>
-          <div class="speaker-list">
-            <div class="speaker-row">
-              <div class="speaker-avatar">CW</div>
-              <div class="speaker-name">Christian Winkler</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <h3 class="speaker-org"><span class="dot"></span>Bavarian Nordic</h3>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Vaccines for Public Preparedness and Travel Health</div>
-          </div>
-          <div class="speaker-list">
-            <div class="speaker-row">
-              <div class="speaker-avatar">HH</div>
-              <div>
-                <div class="speaker-name">Hubertus Hochrein</div>
-                <span class="speaker-presenter">Presenter</span>
-              </div>
-            </div>
-            <div class="speaker-row">
-              <div class="speaker-avatar">ES</div>
-              <div class="speaker-name">Eva Schalk</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <h3 class="speaker-org"><span class="dot"></span>MSD</h3>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">From Innovation to Impact: Why the Next Challenge in Vaccines Is
-              Implementation</div>
-          </div>
-          <div class="speaker-list">
-            <div class="speaker-row">
-              <div class="speaker-avatar">TR</div>
-              <div>
-                <div class="speaker-name">Thorsten Christian Reuter</div>
-                <span class="speaker-presenter">Presenter</span>
-              </div>
-            </div>
-            <div class="speaker-row">
-              <div class="speaker-avatar">VL</div>
-              <div class="speaker-name">Vanessa Lipp</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="speakers-group-title fade-in-element">Charité Center for Global Health Session</h3>
-      <div class="speakers-grid">
-        <div class="speaker-card fade-in-element">
-          <div class="speaker-avatar">TK</div>
-          <div class="speaker-name">Tomislav Kostevc</div>
-          <div class="speaker-role">Discovery Research</div>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Antigen discovery and translational immunology (tbc)</div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <div class="speaker-avatar">LS</div>
-          <div class="speaker-name">Leif Sanders</div>
-          <div class="speaker-role">Clinical Evaluation</div>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Licensing and post-licensure vaccine studies at Charité</div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <div class="speaker-avatar">JM</div>
-          <div class="speaker-name">Julia Mayer</div>
-          <div class="speaker-role">Measuring / Predicting Impact</div>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">The value of vaccines in Germany</div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <div class="speaker-avatar">LI</div>
-          <div class="speaker-name">Lucy Ingaiza</div>
-          <div class="speaker-role">Measuring / Predicting Impact</div>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">The value of vaccines in Germany</div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <div class="speaker-avatar">FD</div>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Oliver Damm</div>
+          <div class="speaker-role">Health Economics &amp; Market Access, Vaccines at Sanofi</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
           <div class="speaker-name">Felix Drexler</div>
-          <div class="speaker-role">Vaccines for Emerging Pathogens</div>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Considerations for Oropouche virus vaccines</div>
-          </div>
-        </div>
-
-        <div class="speaker-card fade-in-element">
-          <div class="speaker-avatar">BH</div>
+          <div class="speaker-role">Professor of Virology at Charité</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Christof von Eiff</div>
+          <div class="speaker-role">Medical Director Vaccines at Pfizer</div>
+        </a>
+        <a href="#session-welcome" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge host">Host</span>
+          <div class="speaker-name">Stefan Flasche</div>
+          <div class="speaker-role">Professor for Global Health at Charité</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
           <div class="speaker-name">Branwen Hennig</div>
-          <div class="speaker-role">Policy Translation</div>
-          <div class="speaker-talk">
-            <span class="speaker-talk-label">Presentation</span>
-            <div class="speaker-talk-title">Connecting Global Health Policy</div>
-          </div>
-        </div>
+          <div class="speaker-role">Executive Director at Global Health Policy Lab</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Hubertus Hochrein</div>
+          <div class="speaker-role">Director Project Management at Bavarian Nordic</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge chair">Chair</span>
+          <div class="speaker-name">Joachim Hombach</div>
+          <div class="speaker-role">Former Executive Secretary of SAGE at WHO</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Lucy Ingaiza</div>
+          <div class="speaker-role">Vaccine Impact Researcher at Charité</div>
+        </a>
+        <a href="#session-welcome" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge host">Host</span>
+          <div class="speaker-name">Beate Kampmann</div>
+          <div class="speaker-role">Professor of Global Health and Scientific Director of the Center for Global Health at Charité</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Tomislav Kostevc</div>
+          <div class="speaker-role">Vaccine Discovery Research at Charité</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Vanessa Lipp</div>
+          <div class="speaker-role">Medical Affairs Vaccines at MSD</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Alen Marijam</div>
+          <div class="speaker-role">Health Economics &amp; Value Evidence, Vaccines at GSK</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Julia Mayer</div>
+          <div class="speaker-role">Vaccine Impact Modelling Researcher at Charité</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Manuel Plomer</div>
+          <div class="speaker-role">Medical Affairs Vaccines at Sanofi</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Thorsten Christian Reuter</div>
+          <div class="speaker-role">Medical Affairs Vaccines at MSD</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Leif Erik Sander</div>
+          <div class="speaker-role">Professor of Infectious Diseases at Charité</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Eva Schalk</div>
+          <div class="speaker-role">Medical Affairs at Bavarian Nordic</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Christian Theilacker</div>
+          <div class="speaker-role">Senior Director Global Medical Affairs Vaccines at Pfizer</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Corinna Weinhart</div>
+          <div class="speaker-role">Medical Affairs Vaccines at GSK</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Christian Winkler</div>
+          <div class="speaker-role">Medical Affairs at Moderna</div>
+        </a>
       </div>
     </div>
   </section>
@@ -2052,7 +2001,7 @@
 
       <div class="timeline">
         <!-- 08:45 -->
-        <div class="timeline-item fade-in-element" data-category="networking">
+        <div id="session-welcome" class="timeline-item fade-in-element" data-category="networking">
           <div class="timeline-time">08:45 - 09:00</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -2072,7 +2021,7 @@
         </div>
 
         <!-- 09:00 - 10:00 INDUSTRY SESSION -->
-        <div class="timeline-item highlight-session fade-in-element" data-category="industry">
+        <div id="session-industry" class="timeline-item highlight-session fade-in-element" data-category="industry">
           <div class="timeline-time">09:00 - 10:30</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -2158,7 +2107,7 @@
         </div>
 
         <!-- CCGH SESSION -->
-        <div class="timeline-item highlight-session fade-in-element" data-category="ccgh">
+        <div id="session-ccgh" class="timeline-item highlight-session fade-in-element" data-category="ccgh">
           <div class="timeline-time">11:00 - 12:30</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -2189,7 +2138,7 @@
                 <span class="subtalk-time">11:15</span>
                 <div class="subtalk-org">Clinical Evaluation</div>
                 <div class="subtalk-topic">Licensing and post-licensure vaccine studies at Charité</div>
-                <div class="subtalk-speakers">Leif Sanders</div>
+                <div class="subtalk-speakers">Leif Erik Sander</div>
               </div>
 
               <div class="subtalk-card">
