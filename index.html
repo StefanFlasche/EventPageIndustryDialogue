@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CCGH Industry Dialogue on Vaccines | Charité Center for Global Health</title>
+  <link rel="icon" type="image/jpeg" href="assets/Favicon.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -12,18 +13,20 @@
     rel="stylesheet" />
   <style>
     :root {
-      /* Charité Corporate Design inspired palette */
-      --charite-blue: #00457d;
-      --charite-dark-blue: #002b50;
-      --charite-light-blue: #0088d4;
-      --charite-cyan: #00a0dc;
-      --charite-ice: #edf5fa;
-      --charite-grey-light: #f5f7fa;
-      --charite-grey-border: #e2e8f0;
-      --charite-text-main: #1a2530;
-      --charite-text-muted: #536579;
-      --card-shadow: 0 10px 30px -5px rgba(0, 43, 80, 0.08), 0 4px 12px -2px rgba(0, 43, 80, 0.04);
-      --card-shadow-hover: 0 20px 40px -10px rgba(0, 69, 125, 0.16), 0 8px 16px -4px rgba(0, 69, 125, 0.08);
+      /* CCGH / Charité corporate palette (see assets/CCGH Style) */
+      --charite-blue: #002552;          /* Charité-Dunkelblau */
+      --charite-dark-blue: #002552;     /* Charité-Dunkelblau */
+      --charite-light-blue: #0d9aa9;    /* Charité-Mineral (accent) */
+      --charite-cyan: #0d9aa9;          /* Charité-Mineral (accent) */
+      --charite-blue-20: #ccdceb;       /* Charité Blau 20% */
+      --charite-ice: #e6eef6;
+      --charite-grey-light: #f4f5f6;
+      --charite-grey-border: #e1e4e6;
+      --charite-grey: #cbcfd2;          /* Charité-Hellgrau */
+      --charite-text-main: #2a3135;
+      --charite-text-muted: #5e676c;    /* Textgrau */
+      --card-shadow: 0 10px 30px -5px rgba(0, 37, 82, 0.08), 0 4px 12px -2px rgba(0, 37, 82, 0.04);
+      --card-shadow-hover: 0 20px 40px -10px rgba(0, 37, 82, 0.16), 0 8px 16px -4px rgba(0, 37, 82, 0.08);
       --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -65,7 +68,7 @@
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(0, 69, 125, 0.08);
+      border-bottom: 1px solid rgba(0, 37, 82, 0.08);
       transition: var(--transition);
       padding: 0.85rem 2rem;
     }
@@ -73,7 +76,7 @@
     .navbar.scrolled {
       padding: 0.6rem 2rem;
       background: rgba(255, 255, 255, 0.98);
-      box-shadow: 0 4px 20px rgba(0, 43, 80, 0.07);
+      box-shadow: 0 4px 20px rgba(0, 37, 82, 0.07);
     }
 
     .nav-container {
@@ -93,7 +96,7 @@
     }
 
     .nav-brand-logo {
-      height: 38px;
+      height: 44px;
       width: auto;
     }
 
@@ -147,13 +150,13 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, var(--charite-blue), var(--charite-light-blue));
+      background: var(--charite-blue);
       color: #fff !important;
       padding: 0.6rem 1.3rem;
       border-radius: 30px;
       font-weight: 600 !important;
       font-size: 0.88rem !important;
-      box-shadow: 0 4px 14px rgba(0, 69, 125, 0.25);
+      box-shadow: 0 4px 14px rgba(0, 37, 82, 0.25);
       transition: var(--transition);
       text-decoration: none;
       border: none;
@@ -162,8 +165,8 @@
 
     .nav-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 136, 212, 0.35);
-      background: linear-gradient(135deg, #003662, #0077b8);
+      box-shadow: 0 6px 20px rgba(13, 154, 169, 0.35);
+      background: #00386f;
     }
 
     .nav-cta::after {
@@ -177,7 +180,7 @@
       display: flex;
       align-items: center;
       padding-top: 5rem;
-      background: linear-gradient(135deg, #001e38 0%, #003561 50%, #004d8c 100%);
+      background: var(--charite-dark-blue);
       color: #fff;
       overflow: hidden;
     }
@@ -194,8 +197,8 @@
     .hero-particles {
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 80% 30%, rgba(0, 160, 220, 0.3) 0%, transparent 60%),
-        radial-gradient(circle at 10% 80%, rgba(0, 212, 170, 0.15) 0%, transparent 50%);
+      background: radial-gradient(circle at 80% 30%, rgba(13, 154, 169, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 10% 80%, rgba(204, 220, 235, 0.15) 0%, transparent 50%);
       pointer-events: none;
     }
 
@@ -218,7 +221,7 @@
       background: rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.22);
-      color: #7de0ff;
+      color: #7fd3dc;
       padding: 0.4rem 1rem;
       border-radius: 100px;
       font-size: 0.82rem;
@@ -232,8 +235,8 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #00e5ff;
-      box-shadow: 0 0 10px #00e5ff;
+      background: #5fc6d1;
+      box-shadow: 0 0 10px #5fc6d1;
       animation: pulseAnim 2s infinite;
     }
 
@@ -260,14 +263,14 @@
     }
 
     .hero-title span.highlight {
-      background: linear-gradient(110deg, #64d2ff 0%, #ffffff 70%);
+      background: linear-gradient(110deg, #5fc6d1 0%, #ffffff 70%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero-subtitle {
       font-size: 1.25rem;
-      color: #cfe3f5;
+      color: #ccdceb;
       font-weight: 400;
       line-height: 1.5;
       margin-bottom: 2rem;
@@ -296,12 +299,12 @@
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      background: rgba(0, 160, 220, 0.2);
-      border: 1px solid rgba(0, 160, 220, 0.35);
+      background: rgba(13, 154, 169, 0.2);
+      border: 1px solid rgba(13, 154, 169, 0.35);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #64d2ff;
+      color: #7fd3dc;
       flex-shrink: 0;
     }
 
@@ -309,7 +312,7 @@
       font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: #9ac2e6;
+      color: #a9bfd6;
       font-weight: 600;
     }
 
@@ -342,15 +345,15 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #0096dc, #0070bb);
+      background: var(--charite-cyan);
       color: #ffffff;
-      box-shadow: 0 8px 24px rgba(0, 136, 212, 0.35);
+      box-shadow: 0 8px 24px rgba(13, 154, 169, 0.35);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, #00a4ee, #0081d6);
+      background: #0b8794;
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 136, 212, 0.5);
+      box-shadow: 0 12px 30px rgba(13, 154, 169, 0.5);
     }
 
     .btn-outline-hero {
@@ -411,14 +414,14 @@
       bottom: 0;
       left: 0;
       z-index: 3;
-      border-color: rgba(0, 160, 220, 0.4);
+      border-color: rgba(13, 154, 169, 0.4);
     }
 
     .hero-card-floating-badge {
       position: absolute;
       bottom: 25px;
       right: -15px;
-      background: rgba(0, 43, 80, 0.88);
+      background: rgba(0, 37, 82, 0.88);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 14px;
@@ -463,7 +466,7 @@
 
     .hero-card-floating-badge .badge-text small {
       font-size: 0.72rem;
-      color: #9ac2e6;
+      color: #a9bfd6;
       display: block;
       font-weight: 500;
     }
@@ -594,7 +597,7 @@
     .parallax-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(0, 30, 56, 0.88), rgba(0, 69, 125, 0.82));
+      background: linear-gradient(135deg, rgba(0, 37, 82, 0.88), rgba(0, 37, 82, 0.82));
     }
 
     .parallax-content {
@@ -615,7 +618,7 @@
 
     .parallax-content p {
       font-size: 1.2rem;
-      color: #daeaf7;
+      color: #ccdceb;
       margin-bottom: 2rem;
       max-width: 680px;
       margin-left: auto;
@@ -671,7 +674,7 @@
       left: 0;
       right: 0;
       padding: 2rem 1.4rem 1.4rem;
-      background: linear-gradient(to top, rgba(0, 25, 48, 0.95) 0%, rgba(0, 25, 48, 0.6) 65%, transparent 100%);
+      background: linear-gradient(to top, rgba(0, 25, 56, 0.95) 0%, rgba(0, 25, 56, 0.6) 65%, transparent 100%);
       color: #fff;
       transform: translateY(10px);
       transition: var(--transition);
@@ -700,7 +703,7 @@
 
     .gallery-caption p {
       font-size: 0.84rem;
-      color: #cbdbe8;
+      color: #ccdceb;
       line-height: 1.4;
       opacity: 0.9;
     }
@@ -736,7 +739,7 @@
       background: var(--charite-blue);
       color: #ffffff;
       border-color: var(--charite-blue);
-      box-shadow: 0 4px 12px rgba(0, 69, 125, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 37, 82, 0.2);
     }
 
     .timeline {
@@ -752,7 +755,7 @@
       bottom: 0;
       left: 110px;
       width: 3px;
-      background: linear-gradient(to bottom, var(--charite-light-blue), #c7e0f2);
+      background: linear-gradient(to bottom, var(--charite-light-blue), var(--charite-blue-20));
       border-radius: 2px;
     }
 
@@ -789,14 +792,14 @@
       background: #ffffff;
       border: 3.5px solid var(--charite-light-blue);
       z-index: 2;
-      box-shadow: 0 0 0 4px rgba(0, 136, 212, 0.15);
+      box-shadow: 0 0 0 4px rgba(13, 154, 169, 0.15);
       transition: var(--transition);
     }
 
     .timeline-item:hover .timeline-dot {
       background: var(--charite-light-blue);
       transform: scale(1.3);
-      box-shadow: 0 0 0 6px rgba(0, 136, 212, 0.25);
+      box-shadow: 0 0 0 6px rgba(13, 154, 169, 0.25);
     }
 
     .timeline-content {
@@ -826,28 +829,28 @@
     }
 
     .badge-opening {
-      background: #fff8e1;
-      color: #f57f17;
+      background: var(--charite-grey-light);
+      color: var(--charite-text-muted);
     }
 
     .badge-industry {
-      background: #e8f5e9;
-      color: #2e7d32;
+      background: var(--charite-blue-20);
+      color: var(--charite-dark-blue);
     }
 
     .badge-ccgh {
-      background: #ede7f6;
-      color: #512da8;
+      background: #d5eef0;
+      color: #0a7681;
     }
 
     .badge-break {
-      background: #fff8e1;
-      color: #f57f17;
+      background: var(--charite-grey-light);
+      color: var(--charite-text-muted);
     }
 
     .badge-panel {
-      background: #fce4ec;
-      color: #c2185b;
+      background: var(--charite-dark-blue);
+      color: #ffffff;
     }
 
     .timeline-title {
@@ -927,15 +930,15 @@
 
     .speakers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+      gap: 0.9rem;
     }
 
     .speaker-card {
       background: #ffffff;
       border: 1px solid var(--charite-grey-border);
-      border-radius: 16px;
-      padding: 1.6rem;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
       box-shadow: var(--card-shadow);
       transition: var(--transition);
       display: flex;
@@ -945,6 +948,15 @@
       overflow: hidden;
     }
 
+    a.speaker-card {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .timeline-item[id] {
+      scroll-margin-top: 100px;
+    }
+
     .speaker-card::before {
       content: '';
       position: absolute;
@@ -952,13 +964,13 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--charite-blue), var(--charite-cyan));
+      background: var(--charite-cyan);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     .speaker-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-3px);
       box-shadow: var(--card-shadow-hover);
     }
 
@@ -970,7 +982,7 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--charite-blue), var(--charite-light-blue));
+      background: var(--charite-blue);
       color: #fff;
       display: flex;
       align-items: center;
@@ -979,23 +991,37 @@
       font-weight: 800;
       margin-bottom: 1.2rem;
       border: 3px solid var(--charite-ice);
-      box-shadow: 0 4px 10px rgba(0, 69, 125, 0.15);
+      box-shadow: 0 4px 10px rgba(0, 37, 82, 0.15);
     }
 
     .speaker-name {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--charite-dark-blue);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
+      padding-right: 4.5rem;
     }
 
     .speaker-role {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--charite-light-blue);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--charite-text-muted);
+      line-height: 1.35;
+    }
+
+    .speaker-role-badge {
+      display: inline-block;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.6rem;
+      letter-spacing: 0.06em;
+      padding: 2px 7px;
+      border-radius: 5px;
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      font-size: 0.6rem;
+      background: var(--charite-ice);
+      color: var(--charite-dark-blue);
     }
 
     .speaker-bio {
@@ -1004,11 +1030,118 @@
       line-height: 1.5;
     }
 
+    .speaker-org {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--charite-dark-blue);
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .speaker-org span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--charite-cyan);
+      flex-shrink: 0;
+    }
+
+    .speaker-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      width: 100%;
+      padding-top: 1.1rem;
+      border-top: 1px dashed var(--charite-grey-border);
+    }
+
+    .speaker-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .speaker-row .speaker-avatar {
+      width: 48px;
+      height: 48px;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .speaker-row .speaker-name {
+      font-size: 1rem;
+      margin-bottom: 0;
+      line-height: 1.35;
+    }
+
+    .speaker-presenter {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--charite-light-blue);
+      background: var(--charite-ice);
+      padding: 0.1rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.25rem;
+    }
+
+    .speaker-talk {
+      width: 100%;
+      background: var(--charite-grey-light);
+      border-left: 3px solid var(--charite-light-blue);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .speaker-talk-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--charite-text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .speaker-talk-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--charite-dark-blue);
+      line-height: 1.4;
+    }
+
+    .speakers-group-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--charite-dark-blue);
+      margin-bottom: 1.6rem;
+    }
+
+    .speakers-group-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--charite-grey-border);
+    }
+
+    .speakers-grid + .speakers-group-title {
+      margin-top: 3.5rem;
+    }
+
     .speaker-badge-tbc {
       display: inline-block;
       font-size: 0.68rem;
-      background: #f1f5f9;
-      color: #64748b;
+      background: var(--charite-grey-light);
+      color: var(--charite-text-muted);
       padding: 0.15rem 0.5rem;
       border-radius: 4px;
       margin-top: 0.6rem;
@@ -1019,8 +1152,8 @@
     .partners-section {
       background: var(--charite-ice);
       padding: 4.5rem 2rem;
-      border-top: 1px solid rgba(0, 69, 125, 0.08);
-      border-bottom: 1px solid rgba(0, 69, 125, 0.08);
+      border-top: 1px solid rgba(0, 37, 82, 0.08);
+      border-bottom: 1px solid rgba(0, 37, 82, 0.08);
     }
 
     .partners-title {
@@ -1051,8 +1184,8 @@
       padding: 0.8rem 1.6rem;
       background: #ffffff;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 43, 80, 0.04);
-      border: 1px solid rgba(0, 69, 125, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 37, 82, 0.04);
+      border: 1px solid rgba(0, 37, 82, 0.08);
       transition: var(--transition);
       letter-spacing: -0.01em;
       display: flex;
@@ -1062,7 +1195,7 @@
 
     .partner-pill:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 69, 125, 0.12);
+      box-shadow: 0 8px 20px rgba(0, 37, 82, 0.12);
       border-color: var(--charite-light-blue);
     }
 
@@ -1163,7 +1296,7 @@
       position: absolute;
       bottom: 20px;
       left: 20px;
-      background: rgba(0, 25, 48, 0.85);
+      background: rgba(0, 25, 56, 0.85);
       backdrop-filter: blur(10px);
       padding: 0.8rem 1.4rem;
       border-radius: 12px;
@@ -1175,7 +1308,7 @@
 
     /* REGISTRATION SECTION */
     .registration-section {
-      background: linear-gradient(135deg, var(--charite-dark-blue) 0%, var(--charite-blue) 100%);
+      background: var(--charite-dark-blue);
       color: #fff;
       position: relative;
       overflow: hidden;
@@ -1197,7 +1330,7 @@
 
     .registration-section p {
       font-size: 1.18rem;
-      color: #d1e4f5;
+      color: #ccdceb;
       margin-bottom: 2.5rem;
       line-height: 1.6;
     }
@@ -1211,13 +1344,13 @@
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     }
 
-    .reg-placeholder-badge {
+    .reg-open-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 193, 7, 0.2);
-      border: 1px solid rgba(255, 193, 7, 0.4);
-      color: #ffd54f;
+      background: rgba(0, 229, 255, 0.12);
+      border: 1px solid rgba(0, 229, 255, 0.35);
+      color: #7de0ff;
       padding: 0.35rem 0.9rem;
       border-radius: 30px;
       font-size: 0.82rem;
@@ -1227,72 +1360,75 @@
       margin-bottom: 1.5rem;
     }
 
-    .reg-form-mock {
+    .reg-open-badge .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5fc6d1;
+      box-shadow: 0 0 10px #5fc6d1;
+      animation: pulseAnim 2s infinite;
+    }
+
+    .reg-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2.2rem;
+      text-align: left;
+    }
+
+    .reg-step {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
-      max-width: 520px;
-      margin: 0 auto;
+      gap: 0.3rem;
+      padding: 1.2rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
     }
 
-    .reg-input-group {
+    .reg-step-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(13, 154, 169, 0.25);
+      border: 1px solid rgba(13, 154, 169, 0.5);
+      color: #7de0ff;
       display: flex;
-      gap: 0.8rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
     }
 
-    .reg-input {
-      flex: 1;
-      padding: 0.95rem 1.4rem;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
-      font-size: 0.95rem;
-      outline: none;
-      transition: var(--transition);
+    .reg-step strong {
+      color: #ffffff;
+      font-size: 0.98rem;
     }
 
-    .reg-input::placeholder {
-      color: #a4c4e0;
+    .reg-step span:not(.reg-step-num) {
+      color: var(--charite-blue-20);
+      font-size: 0.86rem;
+      line-height: 1.45;
     }
 
-    .reg-input:focus {
-      border-color: var(--charite-cyan);
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 0 4px rgba(0, 160, 220, 0.25);
-    }
-
-    .btn-reg {
-      background: linear-gradient(135deg, #00b4d8, #0077b6);
-      color: #fff;
-      font-weight: 700;
-      padding: 0.95rem 2rem;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      box-shadow: 0 8px 20px rgba(0, 180, 216, 0.35);
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-
-    .btn-reg:hover {
-      background: linear-gradient(135deg, #00c6eb, #0088cc);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(0, 180, 216, 0.5);
+    .btn-reg-cta {
+      font-size: 1.05rem;
+      padding: 1rem 2.2rem;
     }
 
     .reg-note {
       font-size: 0.82rem !important;
-      color: #a9cbe8 !important;
+      color: #a9bfd6 !important;
       margin-top: 1rem !important;
       margin-bottom: 0 !important;
     }
 
     /* FOOTER */
     footer {
-      background: #001322;
-      color: #8faec9;
+      background: var(--charite-dark-blue);
+      color: var(--charite-blue-20);
       padding: 1.5rem 2rem;
       font-size: 0.88rem;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1306,6 +1442,12 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 1rem;
+    }
+
+    .footer-logo {
+      height: 48px;
+      width: auto;
+      display: block;
     }
 
     .footer-minimal a {
@@ -1323,7 +1465,7 @@
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 20, 40, 0.7);
+      background: rgba(0, 25, 56, 0.7);
       backdrop-filter: blur(8px);
       z-index: 2000;
       display: flex;
@@ -1375,7 +1517,7 @@
     }
 
     .modal-close:hover {
-      background: #e2e8f0;
+      background: var(--charite-grey-border);
       color: var(--charite-text-main);
     }
 
@@ -1417,15 +1559,15 @@
     .modal-body input:focus,
     .modal-body select:focus {
       border-color: var(--charite-light-blue);
-      box-shadow: 0 0 0 3px rgba(0, 136, 212, 0.15);
+      box-shadow: 0 0 0 3px rgba(13, 154, 169, 0.15);
     }
 
     .modal-alert-box {
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
+      background: #e23e10a0;
+      border: 1px solid #e2340d;
       border-radius: 10px;
       padding: 1rem;
-      color: #166534;
+      color: #f0edec;
       font-size: 0.88rem;
       margin-top: 1rem;
       display: none;
@@ -1469,6 +1611,10 @@
       }
 
       .venue-card-main {
+        grid-template-columns: 1fr;
+      }
+
+      .reg-steps {
         grid-template-columns: 1fr;
       }
 
@@ -1520,11 +1666,7 @@
         grid-template-columns: 1fr;
       }
 
-      .reg-input-group {
-        flex-direction: column;
-      }
-
-      .btn-reg {
+      .btn-reg-cta {
         width: 100%;
       }
     }
@@ -1537,15 +1679,14 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-brand">
-        <div class="nav-brand-text">
-          <span class="main">Vaccine Theme</span>
-        </div>
+        <img src="assets/logo-ccgh.png" alt="Charité Center for Global Health" class="nav-brand-logo" />
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#speakers">Speakers</a></li>
         <li><a href="#agenda">Agenda</a></li>
         <li><a href="#venue">Venue</a></li>
-        <li><a href="#register" class="nav-cta" onclick="openRegistrationModal(event)">Register Now</a></li>
+        <li><a href="#register" class="nav-cta">Register Interest</a></li>
       </ul>
     </div>
   </nav>
@@ -1557,9 +1698,8 @@
     <div class="hero-container">
       <div class="hero-info">
         <h1 class="hero-title">
-          CCGH Industry Dialogue <br />
-          <span class="highlight">on Vaccines</span>
-        </h1>
+           <span class="highlight">The future of vaccines, a dialogue between CCGH & manufacturers </span><br />
+          </h1>
         <p class="hero-subtitle">
           Recent successes, current developments, and future opportunities for vaccines in Germany and globally.
         </p>
@@ -1614,7 +1754,7 @@
 
         <div class="hero-actions">
           <a href="#register" class="btn btn-primary">
-            Registration
+            Register Interest
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1711,7 +1851,7 @@
         <div class="fade-in-element">
           <div
             style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--card-shadow); border: 1px solid var(--charite-grey-border);">
-            <img src="assets/images.jpeg" alt="Historic Charité Lecture Hall"
+            <img src="assets/CCGH.jpg" alt="Group discussion at the Charité Center for Global Health"
               style="width: 100%; height: 420px; object-fit: cover; display: block; filter: saturate(1.05);" />
             <div
               style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0, 30, 56, 0.95), transparent); padding: 2rem 1.8rem; color: #fff;">
@@ -1720,11 +1860,10 @@
                 Department</span>
               <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Charité Center for Global Health
               </h4>
-              <p style="font-size: 0.88rem; color: #bed9f2; margin: 0;">Fostering collaboration across the vaccine lifecycle.</p>
+              <p style="font-size: 0.88rem; color: var(--charite-blue-20); margin: 0;">Fostering collaboration across the vaccine lifecycle.<br />Photo: Sabine Gudath</p>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -1735,6 +1874,121 @@
       <h2>A Dialogue Between Science, Industry & Global Policy</h2>
       <p> The Industry Dialogue aims to offer a neutral, scientific forum where academic leaders, global health specialists, and industry experts exchange breakthroughs in vaccine platforms, explore strategic public-private synergies, and debate policy and market access realities.</p>
       <a href="#agenda" class="btn btn-primary">View Programme Timetable</a>
+    </div>
+  </section>
+
+  <!-- CONFIRMED SPEAKERS SECTION -->
+  <section class="speakers-section" id="speakers">
+    <div class="section-container">
+      <div class="section-header fade-in-element">
+        <span class="section-tag">Speakers</span>
+        <h2 class="section-title">Confirmed Speakers</h2>
+        <p class="section-lead">Representatives of six vaccine manufacturers and researchers from the Charité Center
+          for Global Health sharing their perspectives on recent developments and what lies ahead.</p>
+      </div>
+
+      <div class="speakers-grid">
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Oliver Damm</div>
+          <div class="speaker-role">Lead, Evidence-based Medicine and Health Economics and Outcome Research at Sanofi</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Felix Drexler</div>
+          <div class="speaker-role">Professor of Virology at Charité</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Christof von Eiff</div>
+          <div class="speaker-role">Senior Medical Director Vaccines at Pfizer</div>
+        </a>
+        <a href="#session-welcome" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge host">Host</span>
+          <div class="speaker-name">Stefan Flasche</div>
+          <div class="speaker-role">Professor for Global Health at Charité</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Branwen Hennig</div>
+          <div class="speaker-role">Executive Director at Global Health Policy Lab</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Hubertus Hochrein</div>
+          <div class="speaker-role">Vice President, Research &amp; Development at Bavarian Nordic</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge chair">Chair</span>
+          <div class="speaker-name">Joachim Hombach</div>
+          <div class="speaker-role">Former Executive Secretary of SAGE at WHO</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Lucy Ingaiza</div>
+          <div class="speaker-role">PhD Student Health Data Sciences at Charité</div>
+        </a>
+        <a href="#session-welcome" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge host">Host</span>
+          <div class="speaker-name">Beate Kampmann</div>
+          <div class="speaker-role">Professor of Global Health and Scientific Director of the Center for Global Health at Charité</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Tomislav Kostevc</div>
+          <div class="speaker-role">PhD Student at the Berlin Institute of Health</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Vanessa Lipp</div>
+          <div class="speaker-role">Manager Government Affairs at MSD</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Alen Marijam</div>
+          <div class="speaker-role">Senior Director, Medical Lead RSV Germany at GSK</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Julia Mayer</div>
+          <div class="speaker-role">PhD Student Health Data Sciences at Charité</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Manuel Plomer</div>
+          <div class="speaker-role">Medical Head Vaccines Germany &amp; Austria at Sanofi</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Thorsten Christian Reuter</div>
+          <div class="speaker-role">Director Medical Affairs at MSD Germany</div>
+        </a>
+        <a href="#session-ccgh" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Leif Erik Sander</div>
+          <div class="speaker-role">Professor and Chair of Infectious Diseases at Charité</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Eva Schalk</div>
+          <div class="speaker-role">Market Access Lead – DACH at Bavarian Nordic</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Christian Theilacker</div>
+          <div class="speaker-role">Senior Director, Global Medical Strategy and Team Lead Pneumococcal Vaccines at Pfizer</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Corinna Weinhart</div>
+          <div class="speaker-role">Medical Lead Vx Pipeline &amp; Portfolio at GSK</div>
+        </a>
+        <a href="#session-industry" class="speaker-card fade-in-element">
+          <span class="speaker-role-badge speaker">Speaker</span>
+          <div class="speaker-name">Romy Weller</div>
+          <div class="speaker-role">Associate Director - Medical Affairs Germany at Moderna</div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1756,7 +2010,7 @@
 
       <div class="timeline">
         <!-- 08:45 -->
-        <div class="timeline-item fade-in-element" data-category="networking">
+        <div id="session-welcome" class="timeline-item fade-in-element" data-category="networking">
           <div class="timeline-time">08:45 - 09:00</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -1776,12 +2030,12 @@
         </div>
 
         <!-- 09:00 - 10:00 INDUSTRY SESSION -->
-        <div class="timeline-item highlight-session fade-in-element" data-category="industry">
+        <div id="session-industry" class="timeline-item highlight-session fade-in-element" data-category="industry">
           <div class="timeline-time">09:00 - 10:30</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-badge badge-industry">Plenary Industry Session</span>
-            <h4 class="timeline-title">Industry Session: Pipeline Innovations &amp; Platforms</h4>
+            <span class="timeline-badge badge-industry">Manufacturer's view</span>
+            <h4 class="timeline-title">Industry Session: <br> Where we are, where we go &amp; and where we want to be</h4>
             <div class="timeline-session-meta">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -1798,42 +2052,42 @@
               <div class="subtalk-card">
                 <span class="subtalk-time">09:00</span>
                 <div class="subtalk-org">Pfizer</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
+                <div class="subtalk-topic">Pfizer's respiratory vaccine portfolio: current evidence, open questions, future directions</div>
                 <div class="subtalk-speakers">Christian Theilacker &bull; Christof von Eiff</div>
               </div>
 
               <div class="subtalk-card">
                 <span class="subtalk-time">09:10</span>
                 <div class="subtalk-org">GSK</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
-                <div class="subtalk-speakers">Philipp Eßmann (tbc)</div>
+                <div class="subtalk-topic">Mission 75% - Shaping the Future of Prevention</div>
+                <div class="subtalk-speakers">Alen Marijam &bull; Corinna Weinhart</div>
               </div>
 
               <div class="subtalk-card">
                 <span class="subtalk-time">09:20</span>
                 <div class="subtalk-org">Sanofi</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
-                <div class="subtalk-speakers">Dr. Oliver Damm &bull; Dr. Manuel Plomer</div>
+                <div class="subtalk-topic">Convincing Stakeholders Through Scientific Evidence – What it Takes Beyond a Vaccine Pipeline</div>
+                <div class="subtalk-speakers">Oliver Damm &bull; Manuel Plomer</div>
               </div>
 
               <div class="subtalk-card">
                 <span class="subtalk-time">09:30</span>
                 <div class="subtalk-org">Moderna</div>
-                <div class="subtalk-topic">mRNA platform, cost effectiveness, new delivery methods</div>
-                <div class="subtalk-speakers">Christian Winkler (tbc)</div>
+                <div class="subtalk-topic">One Platform, Many Possibilities: The Future of mRNA Vaccines</div>
+                <div class="subtalk-speakers">Romy Weller</div>
               </div>
 
               <div class="subtalk-card">
                 <span class="subtalk-time">09:40</span>
                 <div class="subtalk-org">Bavarian Nordic</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
+                <div class="subtalk-topic">Vaccines for Public Preparedness and Travel Health</div>
                 <div class="subtalk-speakers">Hubertus Hochrein &bull; Eva Schalk</div>
               </div>
 
               <div class="subtalk-card">
                 <span class="subtalk-time">09:50</span>
                 <div class="subtalk-org">MSD</div>
-                <div class="subtalk-topic">Topic to be confirmed</div>
+                <div class="subtalk-topic">From Innovation to Impact: Why the Next Challenge in Vaccines Is Implementation</div>
                 <div class="subtalk-speakers">Thorsten Christian Reuter &bull; Vanessa Lipp</div>
               </div>
 
@@ -1841,7 +2095,7 @@
                 <span class="subtalk-time">10:00</span>
                 <div class="subtalk-org"> Panel discussion</div>
                 <div class="subtalk-topic">Joint Q&A and moderated discussions on the future of vaccines</div>
-                <div class="subtalk-speakers">All speakers in this session</div>
+                <div class="subtalk-speakers">One speaker from each presentation</div>
               </div>
             </div>
           </div>
@@ -1862,12 +2116,12 @@
         </div>
 
         <!-- CCGH SESSION -->
-        <div class="timeline-item highlight-session fade-in-element" data-category="ccgh">
+        <div id="session-ccgh" class="timeline-item highlight-session fade-in-element" data-category="ccgh">
           <div class="timeline-time">11:00 - 12:30</div>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-badge badge-ccgh">CCGH Academic Session</span>
-            <h4 class="timeline-title">Charité Center for Global Health Scientific Session</h4>
+            <span class="timeline-badge badge-ccgh">CCGH's view</span>
+            <h4 class="timeline-title">Charité Center for Global Health Session: <br> Research along the vaccine lifecyle</h4>
             <div class="timeline-session-meta">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -1877,7 +2131,7 @@
               <strong>Session Chair:</strong> Joachim Hombach
             </div>
             <p style="color: var(--charite-text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">
-              Presentations showcasing pivotal vaccine research from Charité, covering antigen discovery, post-licensure
+              Short presentations showcasing vaccine research at Charité, covering antigen discovery, post-licensure
               evaluation, health economics, emerging pathogens, and global policy.
             </p>
 
@@ -1893,7 +2147,7 @@
                 <span class="subtalk-time">11:15</span>
                 <div class="subtalk-org">Clinical Evaluation</div>
                 <div class="subtalk-topic">Licensing and post-licensure vaccine studies at Charité</div>
-                <div class="subtalk-speakers">Leif Sanders</div>
+                <div class="subtalk-speakers">Leif Erik Sander</div>
               </div>
 
               <div class="subtalk-card">
@@ -1907,13 +2161,13 @@
                 <span class="subtalk-time">11:40</span>
                 <div class="subtalk-org">Vaccines for Emerging Pathogens</div>
                 <div class="subtalk-topic">Considerations for Oropouche virus vaccines</div>
-                <div class="subtalk-speakers">Felix Drexler (tbc)</div>
+                <div class="subtalk-speakers">Felix Drexler</div>
               </div>
 
               <div class="subtalk-card">
                 <span class="subtalk-time">11:50</span>
                 <div class="subtalk-org">Policy Translation</div>
-                <div class="subtalk-topic">Connecting Global Health Policy</div>
+                <div class="subtalk-topic">Vaccine-preventable disease health policy: A snapshot</div>
                 <div class="subtalk-speakers">Branwen Hennig</div>
               </div>
 
@@ -1974,8 +2228,8 @@
                 </svg>
               </div>
               <div class="venue-feat-text">
-                <strong>Address &amp; Access</strong>
-                <span>Charitéplatz 1, 10117 Berlin (Access via Campus Mitte, Virchowweg 16)</span>
+                <strong>Address</strong>
+                <span><a href="https://www.google.com/maps/search/?api=1&amp;query=Virchowweg+16%2C+10117+Berlin" target="_blank" rel="noopener noreferrer">Virchowweg 16, 10117 Berlin</a></span>
               </div>
             </div>
 
@@ -2018,47 +2272,50 @@
     </div>
   </section>
 
-  <!-- REGISTRATION PLACEHOLDER SECTION -->
+  <!-- REGISTRATION SECTION -->
   <section class="registration-section" id="register">
     <div class="section-container">
       <div class="reg-wrapper fade-in-element">
-        <div class="reg-placeholder-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12.01" y2="16" />
-          </svg>
-          Registration Placeholder &bull; Space is Limited
+        <div class="reg-open-badge">
+          <span class="pulse"></span>
+          Registration of interest now open
         </div>
-        <h2>Secure Your Participation</h2>
+        <h2>Register Your Interest</h2>
         <p>
-          Attendance at the Hörsaalruine is capped due to historic venue capacity. Pre-register your interest below to
-          receive official confirmation and link updates from the CCGH organizing secretariat.
+          Attendance at the Hörsaalruine is capped due to venue capacity. Registering your interest does not yet
+          guarantee a place &ndash; the CCGH team will review all registrations and approve attendance.
         </p>
 
         <div class="reg-box">
-          <form class="reg-form-mock" onsubmit="handleRegistrationSubmit(event)">
-            <div class="reg-input-group">
-              <input type="text" class="reg-input" id="reg-name" placeholder="Full Name" required />
-              <input type="email" class="reg-input" id="reg-email" placeholder="Institutional Email" required />
+          <div class="reg-steps">
+            <div class="reg-step">
+              <span class="reg-step-num">1</span>
+              <strong>Register your interest</strong>
+              <span>Fill in the short form on our Luma event page.</span>
             </div>
-            <div class="reg-input-group">
-              <input type="text" class="reg-input" id="reg-org" placeholder="Organization / Affiliation" required />
-              <button type="submit" class="btn-reg">
-                Pre-Register Now
-              </button>
+            <div class="reg-step">
+              <span class="reg-step-num">2</span>
+              <strong>Approval by CCGH</strong>
+              <span>The CCGH team reviews registrations and approves attendance.</span>
             </div>
-            <p class="reg-note">
-              Official registration link placeholder:
-              <code>https://charite.de/ccgh/events/vaccine-dialogue-2026/register</code>
-            </p>
-          </form>
-
-          <div id="inline-reg-alert" class="modal-alert-box"
-            style="display: none; margin-top: 1.5rem; text-align: left;">
-            <strong>Thank you for registering!</strong> Your pre-registration for the CCGH Industry Dialogue on Vaccines
-            has been noted. A formal confirmation and attendee pack will be issued closer to the event date.
+            <div class="reg-step">
+              <span class="reg-step-num">3</span>
+              <strong>Confirmation</strong>
+              <span>You will receive an automated confirmation email from Luma once approved.</span>
+            </div>
           </div>
+
+          <a href="https://luma.com/uyx6ff67" class="btn btn-primary btn-reg-cta" target="_blank"
+            rel="noopener noreferrer">
+            Register interest on Luma
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+          <p class="reg-note">Opens luma.com in a new tab &bull; 12th November 2026 &bull; Hörsaalruine, Campus Mitte, Berlin</p>
         </div>
       </div>
     </div>
@@ -2067,7 +2324,8 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-minimal">
-      <span>&copy; 2026 Vaccine Theme &bull; Industry Dialogue on Vaccines</span>
+      <img src="assets/logo-ccgh-white.png" alt="Charité Center for Global Health" class="footer-logo" />
+      <span>&copy; 2026 Vaccine Theme @ CCGH &bull; Industry Dialogue on Vaccines</span>
       <span>Contact: <a href="mailto:globalhealth@charite.de">globalhealth@charite.de</a></span>
     </div>
   </footer>
@@ -2084,7 +2342,7 @@
       <div class="modal-body">
         <form onsubmit="handleModalFormSubmit(event)">
           <label for="m-name">Full Name</label>
-          <input type="text" id="m-name" placeholder="Prof. / Dr. / First Last" required />
+          <input type="text" id="m-name" placeholder="First Last" required />
 
           <label for="m-email">Work Email</label>
           <input type="email" id="m-email" placeholder="name@institution.org" required />
@@ -2200,13 +2458,6 @@
         alertBox.style.display = 'none';
         e.target.reset();
       }, 2500);
-    }
-
-    function handleRegistrationSubmit(e) {
-      e.preventDefault();
-      const alertBox = document.getElementById('inline-reg-alert');
-      alertBox.style.display = 'block';
-      e.target.reset();
     }
   </script>
 </body>
